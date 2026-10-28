@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Nyasha">
+  <title>Recommendations - MoviNite</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <p class="site-name">MoviNite</p>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="movies.html">Movies</a></li>
+          <li><a href="recommend.html" class="active" aria-current="page">Recommendations</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="booking.html">Book Tickets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <h1>Find your movie</h1>
+      <p>Answer three quick questions and we will suggest movies that suit you. Pick one to go straight to booking.</p>
+    </section>
+
+    <section>
+      <!--  Recommendation form - js finds the matches -->
+      <form id="recommendForm" method="get" novalidate>
+
+        <fieldset>
+          <legend>Your preferences</legend>
+
+          <label for="genre">Preferred genre</label>
+          <select id="genre" name="genre" required>
+            <option value="">-- Select a genre --</option>
+            <option value="Action">Action</option>
+            <option value="Comedy">Comedy</option>
+
+            <option value="Animation">Animation</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+          </select>
+          <span class="error" id="errGenre"></span>
+
+          <label for="ageGroup">Age group</label>
+          <select id="ageGroup" name="ageGroup" required>
+            <option value="">-- Select an age group --</option>
+            <option value="Child">Child</option>
+            <option value="Teen">Teen</option>
+            <option value="Adult">Adult</option>
+          </select>
+          <span class="error" id="errAgeGroup"></span>
+
+          <label for="viewing">Viewing preferences</label>
+          <select id="viewing" name="viewing" required>
+            <option value="">-- Select whho you are watching with --</option>
+            <option value="Family">Family</option>
+            <option value="Date Night">Date Night</option>
+            <option value="Friends">Friends</option>
+            <option value="Solo">Solo</option>
+          </select>
+
+          <span class="error" id="errViewing"></span>
+        </fieldset>
+        <p>
+          <button type="submit" class="button">Show you recommendations</button>
+        </p>
+
+      </form>
+
+
+    </section>
+
+    <!-- Results is filled in by js here -->
+    <section id="results" aria-live="polite"></section>
+
+  </main>
+  <footer>
+    <p>&copy; 2026 MoviNite</p>
+    <p>105933091</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

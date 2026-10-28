@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Nyasha">
+  <title>Book Tickets - MoviNite</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <p class="site-name">MoviNite</p>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="movies.html">Movies</a></li>
+          <li><a href="recommend.html">Recommendations</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="booking.html" class="active" aria-current="page">Book Tickets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <h1>Book tickets</h1>
+      <p>Choose your movie, session and tickets, then pick how you would like to pay. If you came from the movie list or the recommendations page, your movie is already selected. You can change it at any time.</p>
+    </section>
+
+    <section>
+      <!--  Booking form -->
+      <form id="bookingForm" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" novalidate>
+
+        <!--  personal info  -->
+        <fieldset>
+          <legend>Your details</legend>
+
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" name="fullName" required>
+          <span class="error" id="errFullName"></span>
+
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" required>
+          <span class="error" id="errEmail"></span>
+
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" required>
+          <span class="error" id="errPhone"></span>
+        </fieldset>
+
+        <!-- Booking details -->
+        <fieldset>
+          <legend>Booking details</legend>
+
+          <!-- option values (1 to 6) match the movie ids in the js -->
+          <label for="movie">Movie</label>
+
+
+            <select id="movie" name="movie" required>
+                <option value="">-- Select a movie --</option>
+                <option value="1">Deadpool &amp; Wolverine</option>
+                <option value="2">The Super Mario Bros. Movie</option>
+                <option value="3">Inside Out 2</option>
+                <option value="4">Interstellar</option>
+                <option value="5">The Batman</option>
+                <option value="6">Barbie</option>
+            </select>
+
+          <span class="error" id="errMovie"></span>
+
+          <label for="screeningDate">Screening date</label>
+          <input type="date" id="screeningDate" name="screeningDate" required>
+          <span class="error" id="errDate"></span>
+
+          <label for="screeningTime">Screening time</label>
+          <input type="time" id="screeningTime" name="screeningTime" required>
+          <span class="error" id="errTime"></span>
+
+          <label for="tickets">Number of tickets</label>
+          <input type="number" id="tickets" name="tickets" value="1" min="1" max="20" required>
+          <span class="error" id="errTickets"></span>
+
+          <label for="ticketType">Ticket type</label>
+          <select id="ticketType" name="ticketType" required>
+            <option value="Adult">Adult</option>
+            <option value="Child">Child</option>
+            <option value="Student">Student</option>
+          </select>
+
+          <label for="requests">Special requests (optional)</label>
+          <textarea id="requests" name="requests" rows="3" cols="40"></textarea>
+        </fieldset>
+
+        <!-- costs are filled in by javaScript  -->
+        <fieldset>
+          <legend>Cost</legend>
+
+          <label for="ticketPrice">Price per ticket</label>
+          <input type="text" id="ticketPrice" name="ticketPrice" value="$0.00" readonly>
+
+          <label for="totalCost">Total cost</label>
+          <input type="text" id="totalCost" name="totalCost" value="$0.00" readonly>
+        </fieldset>
+
+        <!--  Payment below -->
+        <fieldset>
+          <legend>Payment</legend>
+
+          <p>Payment method</p>
+          <label class="option-label" for="payVoucher">
+            <input type="radio" id="payVoucher" name="payment" value="Voucher"> Voucher
+          </label>
+
+          <label class="option-label" for="payOnline">
+            <input type="radio" id="payOnline" name="payment" value="Online payment"> Online payment
+          </label>
+
+          <span class="error" id="errPayment"></span>
+
+          <!-- when voucher is selected -->
+          <div id="voucherFields">
+            <label for="voucherCode">Voucher code (12 digits)</label>
+            <input type="text" id="voucherCode" name="voucherCode" maxlength="12">
+            <span class="error" id="errVoucher"></span>
+          </div>
+
+          <!-- show only when online payment is chose -->
+          <div id="cardFields">
+            <label for="cardType">Card type</label>
+            <select id="cardType" name="cardType">
+              <option value="">-- Select a card --</option>
+              <option value="Visa">Visa</option>
+              <option value="Mastercard">Mastercard</option>
+              <option value="Amex">American Express</option>
+            </select>
+            <span class="error" id="errCardType"></span>
+
+            <label for="cardNumber">Card number</label>
+            <input type="text" id="cardNumber" name="cardNumber" maxlength="16">
+            <span class="hint">Visa and Mastercard: 16 digits // American Express: 15 digits.</span>
+            <span class="error" id="errCardNumber"></span>
+
+            <label for="cardName">Name on card</label>
+            <input type="text" id="cardName" name="cardName">
+            <span class="error" id="errCardName"></span>
+
+            <label for="cardExpiry">Expiry date</label>
+            <input type="month" id="cardExpiry" name="cardExpiry">
+            <span class="error" id="errCardExpiry"></span>
+
+            <label for="cardCvv">Security code (CVV)</label>
+            <input type="text" id="cardCvv" name="cardCvv" maxlength="4">
+            <span class="error" id="errCardCvv"></span>
+          </div>
+
+          <!-- the checkbox copies the email address from the top of the form -->
+          <label for="billingEmail">Billing email</label>
+          <input type="email" id="billingEmail" name="billingEmail" required>
+          <label class="option-label" for="sameEmail">
+            <input type="checkbox" id="sameEmail" name="sameEmail"> Same as email address
+          </label>
+          <span class="error" id="errBillingEmail"></span>
+        </fieldset>
+
+        <!-- Submit -->
+        <p>
+          <button type="submit" class="button">Confirm booking</button>
+        </p>
+        <p class="error" id="errForm"></p>
+
+      </form>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p>&copy; 2026 MoviNite</p>
+    <p>105933091</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

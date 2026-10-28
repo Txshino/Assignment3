@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Nyasha">
+  <title> Movies - MoviNite </title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <p class="site-name">MoviNite </p>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="movies.html" class="active" aria-current="page">Movies</a></li>
+          <li><a href="recommend.html"> Recommendations</a></li>
+          <li><a href="register.html">Register </a></li>
+          <li><a href="booking.html">Book Tickets </a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <h1>Now showing!!</h1>
+      <p>Pick a movie and press the book link to go straight to the booking page with it already selected. Prices are for one adult ticket.</p>
+    </section>
+
+    <!-- Movie list  -->
+    <section class="movie-list" aria-label="Movie listing">
+
+      <!-- Movies with ID assigned -->
+      <article class="movie" id="movie-1">
+        <img src="images/deadpool.webp" alt="Poster for Deadpool and Wolverine" class="poster">
+        <div class="movie-info">
+          <h2>Deadpool &amp; Wolverine</h2>
+          <ul class="movie-details">
+            <li><strong>Genre:  </strong> Action / Comedy</li>
+            <li><strong>Age rating:</strong> MA15+</li>
+            <li><strong>Running time:</strong> 128 minutes</li>
+            <li><strong>Ticket price:</strong> $22.00</li>
+          </ul>
+          <p>Wade Wilson's quiet life is interrupted when the Time Variance Authority pulls him into a mission that could affect the fate of his universe. To save the day, Deadpool teams up with the reluctant Wolverine. </p>
+          
+          <h3>Sessions</h3>
+          <ul class="sessions">
+            <li>Fri 6:30 PM</li>
+            <li>Sat 8:45 PM</li>
+            <li>Sun 4:15 PM</li>
+          </ul>
+          <p><a href="booking.html?movie=1" class="button">Book Deadpool &amp; Wolverine</a></p>
+        </div>
+      </article>
+
+      <article class="movie" id="movie-2">
+        <img src="images/smb.jpg" alt="Poster for The Super Mario Bros. Movie" class="poster">
+        <div class="movie-info">
+          <h2>The Super Mario Bros. Movie</h2>
+          <ul class="movie-details">
+            <li><strong>Genre:</strong> Animation / Adventure</li>
+            <li><strong>Age rating:</strong> PG</li>
+            <li><strong>Running time:</strong> 92 minutes</li>
+            <li><strong>Ticket price:</strong> $18.00</li>
+          </ul>
+          <p>Mario and Luigi are transported to a mysterious world after discovering a strange underground pipe. When Luigi is captured, Mario sets out to rescue his brother with help from Princess Peach and Toad.</p>
+          <h3>Sessions</h3>
+          <ul class="sessions">
+            <li>Thu 7:00 PM</li>
+            <li>Sat 1:30 PM</li>
+            <li>Sun 6:00 PM</li>
+          </ul>
+          <p><a href="booking.html?movie=2" class="button">Book The Super Mario Bros. Movie</a></p>
+        </div>
+      </article>
+
+      <article class="movie" id="movie-3">
+        <img src="images/ap_insideout_ff1.webp" alt="Poster for Inside Out 2" class="poster">
+        <div class="movie-info">
+          <h2>Inside Out 2</h2>
+          <ul class="movie-details">
+            <li><strong>Genre:</strong> Animation / Comedy</li>
+            <li><strong>Age rating:</strong> PG</li>
+            <li><strong>Running time:</strong> 96 minutes</li>
+            <li><strong>Ticket price:</strong> $17.00</li>
+          </ul>
+          <p>Riley is entering her teenage years, and her emotions are facing some unexpected changes. Joy, Sadness, Anger, Fear and Disgust encounter new emotions, including Anxiety, who arrives with plans of her own. </p>
+          <h3>Sessions </h3>
+
+          <ul class="sessions">
+            <li>Sat 10:00 AM</li>
+            <li>Sat 12:15 PM</li>
+            <li>Sun 11:00 AM</li>
+          </ul>
+          <p><a href="booking.html?movie=3" class="button">Book Inside Out 2</a></p>
+        </div>
+      </article>
+
+      <article class="movie" id="movie-4">
+        <img src="images/interstellar.jpg" alt="Poster for Interstellar" class="poster">
+        <div class="movie-info">
+          <h2>Interstellar</h2>
+          <ul class="movie-details">
+            <li><strong>Genre:</strong> Science Fiction</li>
+            <li><strong>Age rating:</strong> M</li>
+            <li><strong>Running time:</strong> 169 minutes</li>
+            <li><strong>Ticket price:</strong> $20.00</li>
+          </ul>
+          <p>As Earth becomes increasingly difficult to inhabit, former pilot Cooper joins a mission to search for a new home for humanity. Travelling through a mysterious wormhole, the crew explores distant worlds while facing difficult choices and the effects of time and distance. Directed by Christopher Nolan. </p>
+          <h3>Sessions</h3>
+          <ul class="sessions">
+            <li>Wed 6:45 PM</li>
+            <li>Fri 8:15 PM</li>
+            <li>Sun 2:00 PM</li>
+          </ul>
+          <p><a href="booking.html?movie=4" class="button">Book Interstellar</a></p>
+        </div>
+      </article>
+
+
+      <article class="movie" id="movie-5">
+      <img src="images/batman.jpg" alt="Poster for The Batman" class="poster">
+        <div class="movie-info">
+          <h2>The Batman</h2>
+          <ul class="movie-details">
+            <li><strong>Genre:</strong> Action / Crime</li>
+            <li><strong>Age rating:</strong> M</li>
+            <li><strong>Running time:</strong> 176 minutes</li>
+            <li><strong>Ticket price:</strong> $22.00</li>
+          </ul>
+          <p>In a dark and crime-ridden Gotham City, Bruce Wayne has spent years fighting criminals as Batman. When a mysterious killer begins targeting powerful public figures, Batman follows a trail of clues that exposes corruption throughout the city. This  detective story combines suspense, action and a darker take on the famous DC superhero.</p>
+          <h3>Sessions</h3>
+          <ul class="sessions">
+            <li>Thu 8:30 PM</li>
+            <li>Sat 7:00 PM</li>
+            <li>Sun 7:30 PM</li>
+          </ul>
+          <p><a href="booking.html?movie=5" class="button">Book The Batman</a></p>
+        </div>
+      </article>
+
+      <article class="movie" id="movie-6">
+        <img src="images/barbie.jpg" alt="Poster for Barbie" class="poster">
+        <div class="movie-info">
+          <h2>Barbie</h2>
+          <ul class="movie-details">
+            <li><strong>Genre:</strong> Comedy / Fantasy</li>
+            <li><strong>Age rating:</strong> PG</li>
+            <li><strong>Running time:</strong> 114 minutes</li>
+            <li><strong>Ticket price:</strong> $19.00</li>
+          </ul>
+          <p>Barbie lives in the colourful, seemingly perfect world of Barbieland until she begins experiencing unexpected thoughts and changes. Alongside Ken, she travels to the real world in search of answers and discovers that life outside Barbieland is far more complicated than she imagined. </p>
+          <h3>Sessions</h3>
+          <ul class="sessions">
+
+            <li>Fri 7:15 PM</li>
+            <li>Sat 5:30 PM</li>
+            <li>Sun 3:30 PM</li>
+          </ul>
+          <p><a href="booking.html?movie=6" class="button">Book Barbie</a></p>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 MoviNite</p>
+    <p>105933091</p>
+  </footer>
+
+ 
+  <script src="js/script.js"></script>
+</body>
+</html>

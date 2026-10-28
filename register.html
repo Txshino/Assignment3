@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Nyasha">
+  <title>Register - MoviNite</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <p class="site-name">MoviNite</p>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="movies.html">Movies</a></li>
+          <li><a href="recommend.html">Recommendations</a></li>
+          <li><a href="register.html" class="active" aria-current="page">Register</a></li>
+          <li><a href="booking.html">Book Tickets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <h1>Create an account</h1>
+      <p>Please enter your details.</p>
+    </section>
+
+    <section>
+      <form id="registerForm" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" novalidate>
+
+        <fieldset>
+          <legend>Account details</legend>
+
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+          <span class="hint">At least 5 characters. Letters, numbers and underscores only.</span>
+          <span class="error" id="errUsername"></span>
+
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" required>
+          <span class="error" id="errEmail"></span>
+
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" required>
+          <span class="hint">Digits only, 8 to 15 digits.</span>
+          <span class="error" id="errPhone"></span>
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+          <span class="hint">At least 10 characters, with an uppercase letter, a lowercase letter, a number and a special character.</span>
+          <span class="error" id="errPassword"></span>
+
+          <label for="confirmPassword">Confirm password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required>
+          <span class="error" id="errConfirm"></span>
+        </fieldset>
+
+        <!--  personal details -->
+        <fieldset>
+          <legend>About you</legend>
+
+          <p>Gender</p>
+          <label class="option-label" for="genderFemale">
+            <input type="radio" id="genderFemale" name="gender" value="Female"> Female
+          </label>
+          <label class="option-label" for="genderMale">
+            <input type="radio" id="genderMale" name="gender" value="Male"> Male
+          </label>
+          <label class="option-label" for="genderNonBinary">
+            <input type="radio" id="genderNonBinary" name="gender" value="Non-binary"> Non-binary
+          </label>
+          <label class="option-label" for="genderNoAnswer">
+            <input type="radio" id="genderNoAnswer" name="gender" value="Prefer not to say"> Prefer not to say
+          </label>
+          <span class="error" id="errGender"></span>
+
+          <p>Preferred movie genre(s)</p>
+          <label class="option-label" for="genreAction">
+            <input type="checkbox" id="genreAction" name="genre" value="Action"> Action
+          </label>
+          <label class="option-label" for="genreComedy">
+            <input type="checkbox" id="genreComedy" name="genre" value="Comedy"> Comedy
+          </label>
+          <label class="option-label" for="genreAnimation">
+            <input type="checkbox" id="genreAnimation" name="genre" value="Animation"> Animation
+          </label>
+          <label class="option-label" for="genreScifi">
+            <input type="checkbox" id="genreScifi" name="genre" value="Sci-Fi"> Sci-Fi
+          </label>
+          <span class="error" id="errGenres"></span>
+
+          <label for="country">Country/Region</label>
+
+          <select id="country" name="country" required>
+            <option value="">Select a country/region </option>
+            <option value="Australia">Australia</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="United States">United States </option>
+            <option value="Other">Other </option>
+          </select>
+          <span class="error" id="errCountry" ></span>
+        </fieldset>
+
+        <p>
+          <button type="submit" class="button">Create your account now</button>
+        </p>
+        <p class="error" id="errForm"></p>
+
+      </form>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p>&copy; 2026 MoviNite</p>
+    <p>105933091</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
