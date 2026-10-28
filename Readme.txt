@@ -3,7 +3,7 @@ MoviNite ----------
 Nyasha | 105933091 | COS10005 Web Development
 
 Mercury link: https://mercury.swin.edu.au/cos10005/s105933091/Assignment3/index.html
-GitHub repository: https://github.com/txshino/Web2
+GitHub repository: https://github.com/Txshino/Assignment3
 
 Img Links:
 Inside out: https://www.wired.com/2015/06/pixar-inside-out/
